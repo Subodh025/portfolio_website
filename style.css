@@ -281,6 +281,74 @@ font-size:18px;
 color:#172033;
 }
 
+.certification-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.certification{
+display:flex;
+gap:18px;
+align-items:flex-start;
+padding:28px;
+background:rgba(255,255,255,.88);
+border:1px solid rgba(15,23,42,.08);
+border-radius:22px;
+box-shadow:0 22px 56px rgba(15,23,42,.08);
+transition:.28s;
+}
+
+.certification:hover{
+transform:translateY(-7px);
+border-color:rgba(249,115,22,.34);
+box-shadow:0 28px 68px rgba(249,115,22,.14);
+}
+
+.certification-icon{
+display:grid;
+place-items:center;
+flex:0 0 58px;
+width:58px;
+height:58px;
+border-radius:18px;
+background:linear-gradient(135deg,#14b8a6,#38bdf8);
+color:#ffffff;
+font-size:25px;
+box-shadow:0 16px 34px rgba(20,184,166,.22);
+}
+
+.certification:nth-child(2) .certification-icon{
+background:linear-gradient(135deg,#6366f1,#8b5cf6);
+box-shadow:0 16px 34px rgba(99,102,241,.2);
+}
+
+.certification:nth-child(3) .certification-icon{
+background:linear-gradient(135deg,#ef4444,#f97316);
+box-shadow:0 16px 34px rgba(239,68,68,.22);
+}
+
+.certification span{
+display:inline-block;
+margin-bottom:8px;
+color:#0f766e;
+font-size:13px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:.08em;
+}
+
+.certification h3{
+font-size:21px;
+line-height:1.25;
+color:#0f172a;
+margin-bottom:10px;
+}
+
+.certification p{
+color:#64748b;
+}
+
 .project-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -318,7 +386,8 @@ margin-bottom:12px;
 color:#64748b;
 }
 
-.project button{
+.project button,
+.certification button{
 margin-top:24px;
 padding:12px 20px;
 background:#0f172a;
@@ -331,7 +400,8 @@ box-shadow:0 14px 30px rgba(15,23,42,.18);
 transition:.25s;
 }
 
-.project button:hover{
+.project button:hover,
+.certification button:hover{
 transform:translateY(-3px);
 background:#ef4444;
 box-shadow:0 18px 38px rgba(239,68,68,.24);
@@ -452,5 +522,9 @@ font-size:15px;
 
 .project,.card,.about-text{
 border-radius:16px;
+}
+
+.certification{
+flex-direction:column;
 }
 }
